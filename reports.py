@@ -1,5 +1,4 @@
 import sqlite3
-
 # Generate low-stock alerts
 def check_low_stock(threshold=5):
     conn = sqlite3.connect('database/inventory.db')
