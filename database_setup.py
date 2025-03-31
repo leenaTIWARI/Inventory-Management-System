@@ -1,7 +1,7 @@
 import sqlite3
 
 def setup_database():
-    conn = sqlite3.connect('database/inventory.db')
+    conn = sqlite3.connect('inventory.db') 
     cursor = conn.cursor()
 
     # Create Users Table
