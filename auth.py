@@ -1,6 +1,5 @@
 import sqlite3
 import bcrypt
-
 # Register User
 def register_user(username, password, role="staff"):
     hashed_pw = bcrypt.hashpw(password.encode(), bcrypt.gensalt())
