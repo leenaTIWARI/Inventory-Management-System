@@ -1,5 +1,4 @@
 import sqlite3
-
 # Record a sale
 def record_sale(product_id, quantity_sold):
     conn = sqlite3.connect('database/inventory.db')
