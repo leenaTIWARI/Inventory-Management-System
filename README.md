@@ -2,7 +2,11 @@
 
 
 ## Overview
-The **Inventory Management System** is a Python-based application designed to help businesses manage their inventory efficiently. It allows users to add, edit, and delete products, track inventory levels, and generate reports.
+The **Inventory Management System** is a Python-based application designed to help businesses efficiently manage their inventory. It provides an intuitive GUI, supports secure authentication, and offers powerful reporting features to streamline inventory tracking.
+
+💡 Whether you're a small business owner or managing a large warehouse, this system helps you keep everything organized and under control.
+
+
 
 ## Features
 - **User Authentication**: Secure login system with password hashing.
@@ -21,7 +25,7 @@ The **Inventory Management System** is a Python-based application designed to he
 ## Installation
 ### 1. Clone the Repository
 ```sh
-git clone https://github.com/Ridhima1605/inventory-management.git
+git clone https://github.com/leenaTIWARI/inventory-management.git
 cd inventory-management
 ```
 
@@ -76,7 +80,3 @@ inventory-management/
 
 ## License
 This project is open-source and available under the **MIT License**.
-
----
-
-Developed with ❤️ by Ridhima Goel
