@@ -1,0 +1,106 @@
+### Project Structure:
+# inventory-management/
+# ├── main.py  # Main entry point
+# ├── database.py  # Database setup
+# ├── auth.py  # User authentication
+# ├── inventory.py  # Inventory CRUD operations
+# ├── gui.py  # GUI Implementation (Tkinter or Flask)
+# ├── reports.py  # Generate reports
+# ├── requirements.txt  # Dependencies
+# ├── README.md  # Project Documentation
+# ├── .gitignore  # Git Ignore file
+
+# main.py
+from gui import start_app
+
+if __name__ == "__main__":
+    start_app()
+
+# database.py
+import sqlite3
+
+def connect_db():
+    conn = sqlite3.connect("inventory.db")
+    cursor = conn.cursor()
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS products (
+        id INTEGER PRIMARY KEY,
+        name TEXT NOT NULL,
+        quantity INTEGER NOT NULL,
+        price REAL NOT NULL
+    )
+    """)
+    conn.commit()
+    return conn
+
+# auth.py
+import bcrypt
+
+def hash_password(password):
+    return bcrypt.hashpw(password.encode(), bcrypt.gensalt()).decode()
+
+def verify_password(stored_password, provided_password):
+    return bcrypt.checkpw(provided_password.encode(), stored_password.encode())
+
+# inventory.py
+from database import connect_db
+
+def add_product(name, quantity, price):
+    conn = connect_db()
+    cursor = conn.cursor()
+    cursor.execute("INSERT INTO products (name, quantity, price) VALUES (?, ?, ?)", (name, quantity, price))
+    conn.commit()
+    conn.close()
+
+def get_products():
+    conn = connect_db()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM products")
+    return cursor.fetchall()
+
+# gui.py
+import tkinter as tk
+from inventory import add_product, get_products
+
+def start_app():
+    root = tk.Tk()
+    root.title("Inventory Management")
+    tk.Label(root, text="Inventory System").pack()
+    tk.Button(root, text="Add Product", command=lambda: add_product("Test", 10, 99.99)).pack()
+    tk.Button(root, text="Show Products", command=lambda: print(get_products())).pack()
+    root.mainloop()
+
+# reports.py
+import pandas as pd
+from inventory import get_products
+
+def generate_report():
+    data = get_products()
+    df = pd.DataFrame(data, columns=["ID", "Name", "Quantity", "Price"])
+    df.to_csv("inventory_report.csv", index=False)
+
+# requirements.txt
+# Flask
+# bcrypt
+# sqlite3
+# pandas
+# tkinter
+
+# README.md
+# Inventory Management System
+## Features:
+- User Authentication
+- Add, Edit, Delete Products
+- Track Inventory Levels
+- Generate Reports
+
+## Setup:
+```sh
+pip install -r requirements.txt
+python main.py
+```
+
+# .gitignore
+__pycache__/
+inventory.db
+*.csv
