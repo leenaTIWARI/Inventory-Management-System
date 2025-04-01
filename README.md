@@ -1,62 +1,62 @@
-Inventory Management System 🏪🚀
+# Inventory-Management-System🚀
 
-📌 Overview
-The Inventory Management System is a Python-based application designed to help businesses efficiently manage their inventory. It provides an intuitive GUI, supports secure authentication, and offers powerful reporting features to streamline inventory tracking.
 
-💡 Whether you're a small business owner or managing a large warehouse, this system helps you keep everything organized and under control.
+## Overview
+The **Inventory Management System** is a Python-based application designed to help businesses manage their inventory efficiently. It allows users to add, edit, and delete products, track inventory levels, and generate reports.
 
-✨ Features
-✔️ User Authentication – Secure login system with password hashing 🔑
-✔️ CRUD Operations – Add, update, delete, and view inventory items 📦
-✔️ Inventory Tracking – Keep track of stock levels in real-time 📊
-✔️ Reporting – Generate sales reports and low-stock alerts 📉
-✔️ Graphical User Interface (GUI) – Simple and interactive interface using Tkinter 🖥️
+## Features
+- **User Authentication**: Secure login system with password hashing.
+- **CRUD Operations**: Add, update, delete, and view inventory items.
+- **Inventory Tracking**: Keep track of stock levels.
+- **Reporting**: Generate reports for sales and low-stock alerts.
+- **Graphical User Interface (GUI)**: Simple and interactive interface using Tkinter.
 
-🛠 Technologies Used
-🚀 Python – Core programming language
-🛢️ SQLite – Lightweight database for storing inventory data
-🎨 Tkinter – GUI framework for user-friendly interactions
-🔐 bcrypt – Secure password hashing for authentication
-📊 Pandas – Data manipulation and report generation
+## Technologies Used
+- **Python**: Core programming language.
+- **SQLite**: Lightweight database for storing inventory data.
+- **Tkinter**: GUI framework for creating the user interface.
+- **bcrypt**: Secure password hashing for authentication.
+- **Pandas**: Used for generating reports.
 
-⚡ Installation Guide
-1️⃣ Clone the Repository
-bash
-Copy code
+## Installation
+### 1. Clone the Repository
+```sh
 git clone https://github.com/Ridhima1605/inventory-management.git
 cd inventory-management
-2️⃣ Create a Virtual Environment (Optional but Recommended)
-bash
-Copy code
+```
+
+### 2. Create a Virtual Environment (Optional but Recommended)
+```sh
 python -m venv env
-# Activate Virtual Environment
 source env/bin/activate  # For Mac/Linux
 env\Scripts\activate  # For Windows
-3️⃣ Install Dependencies
-bash
-Copy code
+```
+
+### 3. Install Dependencies
+```sh
 pip install -r requirements.txt
-🚀 Usage Guide
-1️⃣ Run the Application
-bash
-Copy code
+```
+
+## Usage
+### 1. Run the Application
+```sh
 python main.py
-2️⃣ Add Products
-📌 Open the GUI and click on "Add Product"
-📌 Enter product details such as name, quantity, and price
+```
+### 2. Add Products
+- Open the GUI and click on **"Add Product"**.
+- Enter product details such as name, quantity, and price.
 
-3️⃣ View Inventory
-📌 Click on "Show Products" to view the current stock
+### 3. View Inventory
+- Click on **"Show Products"** to view the current stock.
 
-4️⃣ Generate Reports
-bash
-Copy code
+### 4. Generate Reports
+```sh
 python reports.py
-📌 This will create an inventory_report.csv file with sales and stock data
+```
+This will create an `inventory_report.csv` file.
 
-📂 Project Structure
-bash
-Copy code
+## Project Structure
+```
 inventory-management/
 │── main.py            # Entry point
 │── database.py        # Database setup
@@ -67,10 +67,16 @@ inventory-management/
 │── requirements.txt   # Dependencies
 │── README.md          # Project documentation
 │── .gitignore         # Ignored files
-🚀 Future Improvements
-🔹 Web-based UI – Upgrade from Tkinter to Flask/Django 🌍
-🔹 Role-Based Access Control – Different permissions for admin & staff 🔑
-🔹 Barcode Scanning – Faster product management 📷
+```
 
-📜 License
-This project is open-source and available under the MIT License. Feel free to contribute and enhance it! 😊
+## Future Improvements
+- Implement a web-based UI using Flask or Django.
+- Add role-based access control for users.
+- Integrate barcode scanning for faster product management.
+
+## License
+This project is open-source and available under the **MIT License**.
+
+---
+
+Developed with ❤️ by Ridhima Goel
