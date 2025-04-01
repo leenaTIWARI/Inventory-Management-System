@@ -9,11 +9,11 @@ The **Inventory Management System** is a Python-based application designed to he
 
 
 ## Features
-- **User Authentication**: Secure login system with password hashing.
-- **CRUD Operations**: Add, update, delete, and view inventory items.
-- **Inventory Tracking**: Keep track of stock levels.
-- **Reporting**: Generate reports for sales and low-stock alerts.
-- **Graphical User Interface (GUI)**: Simple and interactive interface using Tkinter.
+- **User Authentication**: Secure login system with password hashing.🔑
+- **CRUD Operations**: Add, update, delete, and view inventory items.📦
+- **Inventory Tracking**: Keep track of stock levels.📊
+- **Reporting**: Generate reports for sales and low-stock alerts.📉
+- **Graphical User Interface (GUI)**: Simple and interactive interface using Tkinter.🖥️
 
 ## Technologies Used
 - **Python**: Core programming language.
